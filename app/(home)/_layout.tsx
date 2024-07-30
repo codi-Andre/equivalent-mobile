@@ -1,8 +1,8 @@
 import { Tabs } from "expo-router"
 import React from "react"
 
-import { TabBarIcon } from "@/components/navigation/TabBarIcon"
-import { Colors } from "@/constants/Colors"
+import { TabBarIcon } from "@/components/navigation/tab-bar-icon"
+import { colors } from "@/constants/colors"
 import { useMigrations } from "drizzle-orm/expo-sqlite/migrator"
 import { useDatabase } from "@/hooks/use-database"
 import { Text, View } from "react-native"
@@ -31,7 +31,7 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors["dark"].tint,
+        tabBarActiveTintColor: colors["dark"].tint,
         headerShown: false,
       }}
     >

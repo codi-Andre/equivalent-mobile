@@ -1,4 +1,4 @@
-import { Colors } from "@/constants/Colors"
+import { colors } from "@/constants/colors"
 import React, { useState } from "react"
 import { StyleSheet } from "react-native"
 import { Dropdown } from "react-native-element-dropdown"
@@ -46,7 +46,7 @@ export function Combobox<T extends { name: string; id: number }>({
 const styles = StyleSheet.create({
   dropdown: {
     height: 50,
-    borderColor: Colors.neutral200,
+    borderColor: colors.neutral200,
     borderWidth: 2,
     borderRadius: 4,
     paddingHorizontal: 4,
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     height: 48,
   },
   item: {
-    borderBottomColor: Colors.neutral200,
+    borderBottomColor: colors.neutral200,
     borderBottomWidth: 1,
   },
 })
