@@ -1,50 +1,59 @@
-# Welcome to your Expo app 👋
+<h1 align="center">
+    Equivalent-mobile
+</h1>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<p align="center">Aplicativo para medir a quantidade de calorias equivalente entre dois alimentos distintos.</p>
 
-## Get started
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/codi-andre/equivalent-mobile.svg">
 
-1. Install dependencies
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/codi-andre/equivalent-mobile.svg">
 
-   ```bash
-   npm install
-   ```
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/codi-andre/equivalent-mobile.svg">
+  <a href="https://github.com/codi-andre/equivalent-mobile/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/codi-andre/equivalent-mobile.svg">
+  </a>
 
-2. Start the app
+  <a href="https://github.com/codi-andre/equivalent-mobile/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/codi-andre/equivalent-mobile.svg">
+  </a>
+</p>
 
-   ```bash
-    npx expo start
-   ```
+<p align="center">
+  <a href="#como-utilizar">Como utilizar</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;
+</p>
 
-In the output, you'll find options to open the app in a
+Agradecimento especial a [Raul Melo](https://github.com/raulfdm) por realizar o tratamento dos dados e disponibilizar a [tabela TACO](http://www.nepa.unicamp.br/taco/tabela.php) em um formato versátil.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+O projeto TACO (Tabela Brasileira de Composição de Alimentos), coordenado pelo Núcleo de Estudos e Pesquisas em Alimentação (NEPA) da UNICAMP e com financiamento do Ministério da Saúde – MS e do Ministério do Desenvolvimento Social e Combate à Fome – MDS, é uma iniciativa para proporcionar dados de um grande número de nutrientes em alimentos nacionais e regionais, obtidos por meio de amostragem representativa e análises realizadas por laboratórios com competência analítica comprovada por estudos interlaboratoriais, segundo critérios internacionais.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Como utilizar
 
-## Get a fresh project
-
-When you're ready, run:
+Clone o repositório e instale as dependências:
 
 ```bash
-npm run reset-project
+git clone https://github.com/codi-Andre/equivalent-mobile.git
+
+npm install
+# or
+bun install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Inicie o servidor de desenvolvimento:
 
-## Learn more
+```bash
+npm start
+# or
+bun start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Baixe o aplicativo **Expo GO**, escanei o QR CODE e veja o resultado.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Tecnologias
 
-## Join the community
+Este projeto foi desenvolvido usando as seguintes tecnologias:
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Expo](https://expo.dev/)
+- [React-Native](https://reactnative.dev/)
+- [Drizzle](https://orm.drizzle.team/)
