@@ -1,24 +1,29 @@
+import { Combobox } from "@/components/combobox"
 import { useDatabase } from "@/hooks/use-database"
 import { useDrizzleStudio } from "expo-drizzle-studio-plugin"
 import { useEffect, useState } from "react"
-import { FlatList, Text } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
 
 export default function App() {
   const { db, expoDb } = useDatabase()
-  const [categoryList, setCategoryList] = useState<
+  const [foods, setFoods] = useState<
     {
       id: number
       name: string
     }[]
   >([])
+  const [food1, setFood1] = useState<string>("")
 
   useEffect(() => {
-    async function getCategories() {
-      const result = await db.query.categories.findMany()
-      setCategoryList(result)
+    async function getFood() {
+      const result = await db.query.foods.findMany({
+        columns: {
+          categoryId: false,
+        },
+      })
+      setFoods(result)
     }
-    getCategories()
+    getFood()
   }, [])
 
   useDrizzleStudio(expoDb)
@@ -27,16 +32,11 @@ export default function App() {
     <SafeAreaView
       style={{
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
+        paddingTop: 16,
+        paddingHorizontal: 8,
       }}
     >
-      <FlatList
-        style={{ flex: 1 }}
-        data={categoryList}
-        renderItem={({ item }) => <Text>{item.name}</Text>}
-        keyExtractor={(item) => item.id.toString()}
-      />
+      <Combobox side="bottom" list={foods} value={food1} setValue={setFood1} />
     </SafeAreaView>
   )
 }
