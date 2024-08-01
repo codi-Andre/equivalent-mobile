@@ -8,14 +8,18 @@ interface ComboboxProps<T> {
   value: string
   setValue: (val: string) => void
   list: T[]
+  labelField?: string | number
+  valueField?: string | number
 }
 
-export function Combobox<T extends { name: string; id: number }>({
+export function Combobox({
   side = "auto",
   list = [],
   setValue,
   value,
-}: ComboboxProps<T>) {
+  labelField = "name",
+  valueField = "id",
+}: ComboboxProps<Record<string | number, string | number>>) {
   const [isFocus, setIsFocus] = useState(false)
 
   return (
@@ -28,8 +32,8 @@ export function Combobox<T extends { name: string; id: number }>({
       data={list}
       search
       maxHeight={300}
-      labelField="name"
-      valueField="id"
+      labelField={labelField}
+      valueField={valueField}
       placeholder={!isFocus ? "Escolha um alimento..." : "..."}
       searchPlaceholder="Busque um alimento..."
       value={value}
